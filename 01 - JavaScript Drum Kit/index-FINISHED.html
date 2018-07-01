@@ -69,8 +69,7 @@
     if (!audio) return;
 
     key.classList.add('playing');
-    audio.currentTime = 0;
-    audio.play();
+    audio.cloneNode().play();
   }
 
   const keys = Array.from(document.querySelectorAll('.key'));
